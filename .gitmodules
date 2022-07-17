@@ -30,7 +30,7 @@
 	branch = master
 [submodule "spike"]
 	path = spike
-	url = https://github.com/riscv-software-src/riscv-isa-sim.git
+	url = https://git.tsinghua.edu.cn/gpu-dsplab/riscv-isa-sim-gpgpu.git
 	branch = master
 [submodule "pk"]
 	path = pk
