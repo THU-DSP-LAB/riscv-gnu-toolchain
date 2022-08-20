@@ -7,6 +7,10 @@ toolchain.  The original repository is `https://github.com/riscv/riscv-gnu-toolc
 
 This gnu-toolchain has been modified for the ventus-gpgpu `https://github.com/THU-DSP-LAB/ventus-gpgpu` by 张泰然， 郑名宸
 
+### Document
+
+The document is under `rvv-gpgpu/document`
+
 ### Getting the sources
 
 This repository uses submodules, but submodules will fetch automatically on demand,
