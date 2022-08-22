@@ -5,10 +5,19 @@ This is the RISC-V C and C++ cross-compiler. It supports two build modes:
 a generic ELF/Newlib toolchain and a more sophisticated Linux-ELF/glibc
 toolchain.
 
+This gnu-toolchain has been modified for the ventus-gpgpu https://github.com/THU-DSP-LAB/ventus-gpgpu by 张泰然， 郑名宸
+
 ### Setting up the enronment for ventus gpgpu
 
     $ git clone git clone https://github.com/riscv/riscv-gnu-toolchain
     $ cd riscv-gnu-toolchain
+    $
+    $ git submodule init riscv-binutils
+    $ git submodule update riscv-binutils
+    $ cd riscv-binutils
+    $ git checkout main                     # make sure the local branch is set to main
+    $ cd ..
+    $
     $ mkdir build && cd build
     $ ../configure --prefix=$RISCV --with-arch=rv64gv --with-abi=lp64d --with-cmodel=medany
     $ make
