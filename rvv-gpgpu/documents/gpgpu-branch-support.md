@@ -2,10 +2,6 @@
 
 本文档记录了spike rvv的基本执行逻辑和为支持gpgpu分支执行和simt stack所做的修改。对gpgpu branch进行支持主要分为两部分：1）支持vector branch指令的执行、2）对simt stack进行建模仿真。
 
-## TODO
-1. simt stack 内部逻辑与接口实现
-2. mask 实现
-
 ## spike原有vector指令执行逻辑
 ```cpp
 VI_VV_LOOP(BODY)
@@ -71,7 +67,7 @@ set_pc(get_npc())
 set_mask(get_mask())
 ```
 ### 与原有mask机制的兼容
-todo
+属于与关系
 
 ## simt stack支持
 
@@ -107,4 +103,16 @@ join_point :
 * 对于全0\/1mask的处理
 
 ### 接口实现
-push_branch pop_join get_npc get_mask - todo
+push_branch pop_join get_npc get_mask 
+
+实现于processor.cc内
+
+### barrier指令
+
+实现多warp之间同步
+
+见insn/v_macro_.h和barrier.h
+
+### endprg指令
+
+打印程序结束
