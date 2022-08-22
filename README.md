@@ -9,13 +9,14 @@ This gnu-toolchain has been modified for the ventus-gpgpu https://github.com/THU
 
 ### Setting up the enronment for ventus gpgpu
 
-    $ git clone git clone https://github.com/riscv/riscv-gnu-toolchain
+    $ git clone git clone https://github.com/THU-DSP-LAB/riscv-gnu-toolchain.git
     $ cd riscv-gnu-toolchain
     $
     $ git submodule init riscv-binutils
     $ git submodule update riscv-binutils
     $ cd riscv-binutils
-    $ git checkout main                     # make sure the local branch is set to main
+    # make sure the local branch is set to main
+    $ git checkout main              
     $ cd ..
     $
     $ mkdir build && cd build
